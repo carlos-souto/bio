@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.4">
+        <title>Carlos Souto</title>
+        <style>
+            * {
+                margin: 0;
+            }
+            html {
+                height: 100%;
+                text-size-adjust: none;
+            }
+            body {
+                font-family: sans-serif;
+                font-size: medium;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+            header {
+                color: white;
+                background-color: darkseagreen;
+                padding: 10px 50px;
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+            }
+            .header-text {
+                font-size: large;
+                font-weight: bold;
+                text-align: center;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .profile-picture {
+                width: auto;
+                height: 80px;
+                border-radius: 50%;
+                border: 2px solid white;
+            }
+            nav {
+                flex: 0;
+                padding: 10px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 10px;
+                border-bottom: 1px solid darkseagreen;
+            }
+            nav button {
+                font-size: medium;
+                font-weight: bold;
+                color: white;
+                background-color: darkseagreen;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 20px;
+                cursor: pointer;
+                transition: all 0.2s;
+            }
+            nav button.active {
+                background-color: darkgreen;
+            }
+            nav button:hover {
+                background-color: green;
+                transform: translateY(-5px);
+            }
+            iframe {
+                flex: 1;
+                border: none;
+            }
+        </style>
+        <script>
+
+            // navigation logic
+            function switchPage(button, page) {
+                document.getElementById("content-frame").src = page;
+                document.querySelectorAll("nav button").forEach(button => button.classList.remove("active"));
+                button.classList.add("active");
+            }
+
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="header-text">
+                <h1>Carlos Souto, MSc</h1>
+                <h3>Coding · Numerical Analysis · Mechanical Engineering · Fatigue</h3>
+            </div>
+            <img class="profile-picture" src="img/profile.jpeg">
+        </header>
+        <nav>
+            <button onclick="switchPage(this, 'publications.html')">Publications</button>
+            <button onclick="switchPage(this, 'conferences.html')">Conferences</button>
+        </nav>
+        <iframe id="content-frame"></iframe>
+    </body>
+</html>

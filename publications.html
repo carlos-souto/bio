@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.4">
+        <title>List of Publications</title>
+        <style>
+            html {
+                text-size-adjust: none;
+            }
+            body {
+                font-family: sans-serif;
+                font-size: medium;
+                max-width: 20cm;
+                margin: 0 auto;
+                padding: 0 10px;
+            }
+            a {
+                color: royalblue;
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+            .table-container {
+                margin-top: 20px;
+                margin-bottom: 30px;
+            }
+            .table-title {
+                font-size: large;
+                font-weight: bold;
+                margin-left: 10px;
+                margin-bottom: 5px;
+            }
+            .metrics-table {
+                width: 100%;
+                border-collapse: collapse;
+                border: 1px solid gainsboro;
+            }
+            .metrics-table th {
+                font-size: medium;
+                font-weight: bold;
+                text-align: left;
+                border: 1px solid gainsboro;
+                padding: 8px;
+            }
+            .metrics-table td {
+                font-size: medium;
+                font-weight: normal;
+                text-align: left;
+                border: 1px solid gainsboro;
+                padding: 8px;
+            }
+            .publications-table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            .publications-table td {
+                font-size: medium;
+                font-weight: normal;
+                text-align: left;
+                border-top: 1px solid gainsboro;
+                border-bottom: 1px solid gainsboro;
+                padding: 8px;
+            }
+            .publications-table img {
+                width: 120px;
+                height: auto;
+                outline: 1px solid black;
+            }
+            .publications-table a {
+                display: inline-block;
+                margin-top: 5px;
+            }
+            .journal-metrics {
+                color: gray;
+                font-size: small;
+            }
+        </style>
+        <script>
+
+            // global journal metrics
+            const journalMetrics = {
+                "ijfatigue": "CiteScore: 10.7 · Impact Factor: 5.7", // International Journal of Fatigue
+                "metals": "CiteScore: 4.9 · Impact Factor: 2.6",     // Metals
+                "prostr": "CiteScore: 1.7",                          // Procedia Structural Integrity
+                "structures": "CiteScore: 5.7 · Impact Factor: 3.9", // Structures
+                "twst": "CiteScore: 9.6 · Impact Factor: 5.7",       // Thin-Walled Structures
+            };
+
+            // apply journal metrics
+            document.addEventListener("DOMContentLoaded", () => {
+                for (var journalKey in journalMetrics) {
+                    document.querySelectorAll(".dynamic-metrics-" + journalKey).forEach((element) => {
+                        element.textContent = journalMetrics[journalKey];
+                    });
+                }
+            });
+
+        </script>
+    </head>
+    <body>
+        <h1>List of Publications · v2024-12-16</h1>
+        <!-- Metrics -->
+        <div class="table-container">
+            <div class="table-title">Research Metrics</div>
+            <table class="metrics-table">
+                <thead>
+                    <tr>
+                        <th>Source</th>
+                        <th>Metrics</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a target="_blank" href="https://www.scopus.com/authid/detail.uri?authorId=57191253134">Scopus</a></td>
+                        <td>
+                            Citations: 189<br>
+                            <var>h</var>-index: 5
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a target="_blank" href="https://www.researchgate.net/profile/Carlos-Souto-5">ResearchGate</a></td>
+                        <td>
+                            Research Interest Score: 145.3<br>
+                            Citations: 193<br>
+                            Reads: 4,575<br>
+                            <var>h</var>-index: 5
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- Publications -->
+        <div class="table-container">
+            <div class="table-title">Publications</div>
+            <table class="publications-table">
+                <tbody>
+                    <tr>
+                        <td><img src="img/cover_twst.jpeg"></td>
+                        <td>
+                            <p>
+                                <b>Carlos Souto</b>, Marco Parente, José Correia, and Abílio de Jesus.
+                                <q>The effect of cold forming residual stresses in local fatigue approaches: A numerical perspective</q>.
+                                <i>Thin-Walled Structures</i> 205A (2024) 112476.
+                                <br>
+                                <a target="_blank" href="https://doi.org/10.1016/j.tws.2024.112476">doi:10.1016/j.tws.2024.112476</a>
+                            </p>
+                            <p class="journal-metrics"><span class="dynamic-metrics-twst"></span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/cover_metals_v14i3.jpeg"></td>
+                        <td>
+                            <p>
+                                Vítor M. G. Gomes, <b>Carlos D. S. Souto</b>, José A. F. O. Correia, and Abílio M. P. de Jesus.
+                                <q>Monotonic and Fatigue Behaviour of the 51CrV4 Steel with Application in Leaf Springs of Railway Rolling Stock</q>.
+                                <i>Metals</i> 14.3 (2024) 266.
+                                <br>
+                                <a target="_blank" href="https://doi.org/10.3390/met14030266">doi:10.3390/met14030266</a>
+                            </p>
+                            <p class="journal-metrics"><span class="dynamic-metrics-metals"></span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/cover_structures.jpeg"></td>
+                        <td>
+                            <p>
+                                <b>C. Souto</b>, C. Castiglioni, A. Menghini, F. Morelli, A. Piscini, B. Hoffmeister, T. Geers, H. Degée, P. Tzintzos, O. Kraus, J. Frederiks, S. Sesana, M. Figueiredo, V. Gomes, J. Correia, and A. de Jesus.
+                                <q>A unified approach for fatigue detail categorization applied to rack structures</q>.
+                                <i>Structures</i> 56 (2023) 104948.
+                                <br>
+                                <a target="_blank" href="https://doi.org/10.1016/j.istruc.2023.104948">doi:10.1016/j.istruc.2023.104948</a>
+                            </p>
+                            <p class="journal-metrics"><span class="dynamic-metrics-structures"></span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/cover_twst.jpeg"></td>
+                        <td>
+                            <p>
+                                <b>Carlos D. S. Souto</b>, Alessandro Menghini, Andrés Díaz, Juan Manuel Manso, Abílio M. P. de Jesus, and Carlo Andrea Castiglioni.
+                                <q>Determination of manufacturing residual stresses in cold-formed thin-walled steel profiles</q>.
+                                <i>Thin-Walled Structures</i> 180 (2022) 109945.
+                                <br>
+                                <a target="_blank" href="https://doi.org/10.1016/j.tws.2022.109945">doi:10.1016/j.tws.2022.109945</a>
+                            </p>
+                            <p class="journal-metrics"><span class="dynamic-metrics-twst"></span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/cover_ijfatigue.jpeg"></td>
+                        <td>
+                            <p>
+                                <b>Carlos D. S. Souto</b>, Vítor M. G. Gomes, Lucas F. R. C. da Silva, Miguel V. Figueiredo, José A. F. O. Correia, Grzegorz Lesiuk, António A. Fernandes, and Abílio M. P. de Jesus.
+                                <q>Global-local fatigue approaches for snug-tight and preloaded hot-dip galvanized steel bolted joints</q>.
+                                <i>International Journal of Fatigue</i> 153 (2021) 106486.
+                                <br>
+                                <a target="_blank" href="https://doi.org/10.1016/j.ijfatigue.2021.106486">doi:10.1016/j.ijfatigue.2021.106486</a>
+                            </p>
+                            <p class="journal-metrics"><span class="dynamic-metrics-ijfatigue"></span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/cover_ijfatigue.jpeg"></td>
+                        <td>
+                            <p>
+                                <b>C. D. S. Souto</b>, V. M. G. Gomes, M. Figueiredo, J. A. F. O. Correia, G. Lesiuk, A. A. Fernandes, and A. M. P. de Jesus.
+                                <q>Fatigue behaviour of thin-walled cold roll-formed steel sections</q>.
+                                <i>International Journal of Fatigue</i> 149 (2021) 106299.
+                                <br>
+                                <a target="_blank" href="https://doi.org/10.1016/j.ijfatigue.2021.106299">doi:10.1016/j.ijfatigue.2021.106299</a>
+                            </p>
+                            <p class="journal-metrics"><span class="dynamic-metrics-ijfatigue"></span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/cover_msc.jpeg"></td>
+                        <td>
+                            <p>
+                                <b>Carlos Daniel Santos Souto</b>.
+                                <q>Fatigue behaviour of cold roll-formed Z-rails for rack structures</q>.
+                                MSc Thesis, Faculty of Engineering of the University of Porto, 2020.
+                                <br>
+                                <a target="_blank" href="https://hdl.handle.net/10216/128427">hdl:10216/128427</a>
+                                <br>
+                                <a target="_blank" href="https://doi.org/10.13140/RG.2.2.26671.71844">doi:10.13140/RG.2.2.26671.71844</a>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/cover_prostr.jpeg"></td>
+                        <td>
+                            <p>
+                                <b>Carlos D. S. Souto</b>, Sérgio M. O. Tavares, José A. F. O. Correia, and Abílio M. P. de Jesus.
+                                <q>Numerical determination of stress intensity factors: J-integral and modified virtual crack closure technique</q>.
+                                <i>Procedia Structural Integrity</i> 28 (2020) 146-154.
+                                <br>
+                                <a target="_blank" href="https://doi.org/10.1016/j.prostr.2020.10.019">doi:10.1016/j.prostr.2020.10.019</a>
+                            </p>
+                            <p class="journal-metrics"><span class="dynamic-metrics-prostr"></span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/cover_prostr.jpeg"></td>
+                        <td>
+                            <p>
+                                <b>C. D. S. Souto</b>, V. M. G. Gomes, M. Figueiredo, J. A. F. O. Correia, G. Lesiuk, A. A. Fernandes, and A. M. P. de Jesus.
+                                <q>Fatigue behavior of cold roll-formed rail profiles for rack structures</q>.
+                                <i>Procedia Structural Integrity</i> 28 (2020) 139-145.
+                                <br>
+                                <a target="_blank" href="https://doi.org/10.1016/j.prostr.2020.10.018">doi:10.1016/j.prostr.2020.10.018</a>
+                            </p>
+                            <p class="journal-metrics"><span class="dynamic-metrics-prostr"></span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/cover_ijfatigue.jpeg"></td>
+                        <td>
+                            <p>
+                                Y. Ai, S. P. Zhu, D. Liao, J. A. F. O. Correia, <b>C. Souto</b>, A. M. P. de Jesus, and B. Keshtegar.
+                                <q>Probabilistic modeling of fatigue life distribution and size effect of components with random defects</q>.
+                                <i>International Journal of Fatigue</i> 126 (2019) 165-173.
+                                <br>
+                                <a target="_blank" href="https://doi.org/10.1016/j.ijfatigue.2019.05.005">doi:10.1016/j.ijfatigue.2019.05.005</a>
+                            </p>
+                            <p class="journal-metrics"><span class="dynamic-metrics-ijfatigue"></span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/cover_prostr.jpeg"></td>
+                        <td>
+                            <p>
+                                <b>Carlos D. S. Souto</b>, José A. F. O. Correia, Abílio M. P. de Jesus, and Rui A. B. Calçada.
+                                <q>Fatigue Damage Tool (FDT) - A tool for fatigue damage assessment according to design codes</q>.
+                                <i>Procedia Structural Integrity</i> 22 (2019) 376-385.
+                                <br>
+                                <a target="_blank" href="https://doi.org/10.1016/j.prostr.2020.01.047">doi:10.1016/j.prostr.2020.01.047</a>
+                            </p>
+                            <p class="journal-metrics"><span class="dynamic-metrics-prostr"></span></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
