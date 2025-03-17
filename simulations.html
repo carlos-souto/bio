@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.4">
+        <title>Numerical Simulations</title>
+        <style>
+            html {
+                text-size-adjust: none;
+            }
+            body {
+                font-family: sans-serif;
+                font-size: medium;
+                max-width: 30cm;
+                margin: 0 auto;
+                padding: 0 10px;
+            }
+            .separator {
+                margin-top: 1.5cm;
+                margin-bottom: 1.5cm;
+                border-bottom: 1px solid gainsboro;
+            }
+            .img-container {
+                gap: 1%;
+                display: flex;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Numerical Simulations · v2025-03-14</h1>
+        <div>
+            <ul>
+                <li><a href="#section-offshore">Offshore Structure with Wind and Wave Loading</a></li>
+                <li><a href="#section-rf">Simulation of the Roll Forming Process</a></li>
+                <li><a href="#section-pb">Press Braking after Sheet Coiling and Uncoiling</a></li>
+                <li><a href="#section-vessel">Analysis of Industrial Pressure Vessels</a></li>
+                <li><a href="#section-ct">Fatigue Crack Propagation using a Custom Finite Element Solver</a></li>
+                <li><a href="#section-joint">Fatigue in Bolted Joints</a></li>
+                <li><a href="#section-adriatic">Modelling Adriatic Sea Levels: The Venice Flood of November 11, 2012</a></li>
+                <li><a href="#section-artery">Hemodynamic Simulation and Atherosclerosis-Prone Zones in the Right Coronary Artery</a></li>
+                <li><a href="#section-pollution">Simulating Water Pollution with a Custom Implicit Finite Element Solver</a></li>
+                <li><a href="#section-plate">Plate Bending with a Custom Finite Element Solver</a></li>
+            </ul>
+        </div>
+
+        <div class="separator"></div>
+
+        <h2 id="section-offshore">Offshore Structure with Wind and Wave Loading</h2>
+        <div class="img-container">
+            <img style="width: 49%; height: auto; max-width: 135px;" src="img/sim_offshore_a.gif">
+            <img style="width: 49%; height: auto; max-width: 500px;" src="img/sim_offshore_b.gif">
+        </div>
+
+        <div class="separator"></div>
+
+        <h2 id="section-rf">Simulation of the Roll Forming Process</h2>
+        <h3>Roll Forming a Z-Profile</h3>
+        <video controls width="900"><source src="img/sim_rf_a.mp4" type="video/mp4"></video>
+
+        <div class="separator"></div>
+
+        <h2 id="section-pb">Press Braking after Sheet Coiling and Uncoiling</h2>
+        <h3>Sheet Coiling and Uncoiling</h3>
+        <img style="width: 100%; height: auto; max-width: 600px;" src="img/sim_pb_a.gif">
+        <h3>Press Braking with Residual Curvature</h3>
+        <img style="width: 100%; height: auto; max-width: 600px;" src="img/sim_pb_b.gif">
+
+        <div class="separator"></div>
+
+        <h2 id="section-vessel">Analysis of Industrial Pressure Vessels</h2>
+        <h3>Finite Element Mesh</h3>
+        <img style="width: 100%; height: auto; max-width: 400px;" src="img/sim_vessel_mesh.png">
+        <h3>Fatigue Analysis</h3>
+        <img style="width: 100%; height: auto; max-width: 600px;" src="img/sim_vessel_static.gif">
+        <h3>Frequency Analysis: Mode 1, 3, and 5</h3>
+        <div class="img-container">
+            <img style="width: 32%; height: auto; max-width: 500px;" src="img/sim_vessel_mode1.gif">
+            <img style="width: 32%; height: auto; max-width: 500px;" src="img/sim_vessel_mode3.gif">
+            <img style="width: 32%; height: auto; max-width: 500px;" src="img/sim_vessel_mode5.gif">
+        </div>
+
+        <div class="separator"></div>
+
+        <h2 id="section-ct">Fatigue Crack Propagation using a Custom Finite Element Solver</h2>
+        <h3>Virtual Crack Extension with Remeshing</h3>
+        <div class="img-container">
+            <img style="width: 49%; height: auto; max-width: 500px;" src="img/sim_ct_a.gif">
+            <img style="width: 49%; height: auto; max-width: 500px;" src="img/sim_ct_b.gif">
+        </div>
+        <h3>Numerical vs. Experimental Results</h3>
+        <img style="width: 100%; height: auto; max-width: 600px;" src="img/sim_ct_c.png">
+
+        <div class="separator"></div>
+
+        <h2 id="section-joint">Fatigue in Bolted Joints</h2>
+        <div class="img-container">
+            <img style="width: 49%; height: auto; max-width: 350px;" src="img/sim_joint_a.gif">
+            <img style="width: 49%; height: auto; max-width: 350px;" src="img/sim_joint_b.gif">
+        </div>
+
+        <div class="separator"></div>
+
+        <h2 id="section-adriatic">Modelling Adriatic Sea Levels: The Venice Flood of November 11, 2012</h2>
+        <h3>Input Data: Atmospheric Pressure, Wind Velocity, and Water Depth</h3>
+        <div class="img-container">
+            <img style="width: 32%; height: auto; max-width: 600px;" src="img/sim_adriatic_pressure.gif">
+            <img style="width: 32%; height: auto; max-width: 600px;" src="img/sim_adriatic_wind.gif">
+            <img style="width: 32%; height: auto; max-width: 600px;" src="img/sim_adriatic_depth.png">
+        </div>
+        <h3>Results: Sea Level</h3>
+        <div class="img-container">
+            <img style="width: 49%; height: auto; max-width: 600px;" src="img/sim_adriatic_elevation.gif">
+            <img style="width: 49%; height: auto; max-width: 500px;" src="img/sim_adriatic_final.png">
+        </div>
+
+        <div class="separator"></div>
+
+        <h2 id="section-artery">Hemodynamic Simulation and Atherosclerosis-Prone Zones in the Right Coronary Artery</h2>
+        <h3>Input Data: Mesh and Blood Flow Velocity and Pressure</h3>
+        <div class="img-container">
+            <img style="width: 49%; height: auto; max-width: 350px;" src="img/sim_artery_mesh.png">
+            <img style="width: 49%; height: auto; max-width: 450px;" src="img/sim_artery_flow.png">
+        </div>
+        <h3>Results: Time-Averaged Wall Shear Stress (TAWSS), Oscillating Shear Index (OSI), and Relative Residence Time (RRT)</h3>
+        <div class="img-container">
+            <img style="width: 32%; height: auto; max-width: 350px;" src="img/sim_artery_TAWSS.png">
+            <img style="width: 32%; height: auto; max-width: 350px;" src="img/sim_artery_OSI.png">
+            <img style="width: 32%; height: auto; max-width: 350px;" src="img/sim_artery_RRT.png">
+        </div>
+
+        <div class="separator"></div>
+
+        <h2 id="section-pollution">Simulating Water Pollution with a Custom Implicit Finite Element Solver</h2>
+        <h3>Water Pollutant Concentration over Time</h3>
+        <img style="width: 100%; height: auto; max-width: 640px;" src="img/sim_pollution.gif">
+
+        <div class="separator"></div>
+
+        <h2 id="section-plate">Plate Bending with a Custom Finite Element Solver</h2>
+        <h3>Static Analysis</h3>
+        <img style="width: 100%; height: auto; max-width: 960px;" src="img/sim_plate_mises.gif">
+        <h3>Frequency Analysis: Mode 1, 3, and 5</h3>
+        <img style="width: 32%; height: auto; max-width: 720px;" src="img/sim_plate_mode1.gif">
+        <img style="width: 32%; height: auto; max-width: 720px;" src="img/sim_plate_mode3.gif">
+        <img style="width: 32%; height: auto; max-width: 720px;" src="img/sim_plate_mode5.gif">
+
+    </body>
+</html>
