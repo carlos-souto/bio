@@ -83,6 +83,11 @@
                 button.classList.add("active");
             }
 
+            // initial load
+            window.onload = () => {
+                switchPage(document.getElementById("home-button"), "home.html");
+            };
+
         </script>
     </head>
     <body>
@@ -94,12 +99,12 @@
             <img class="profile-picture" src="img/profile.jpeg">
         </header>
         <nav>
-            <button onclick="switchPage(this, 'home.html')" class="active">Home</button>
-            <button onclick="switchPage(this, 'publications.html')">Publications</button>
-            <button onclick="switchPage(this, 'conferences.html')">Conferences</button>
-            <button onclick="switchPage(this, 'simulations.html')">Simulations</button>
-            <button onclick="switchPage(this, 'software.html')">Software</button>
+            <button id="home-button" onclick="switchPage(this, 'home.html')">Home</button>
+            <button id="publications-button" onclick="switchPage(this, 'publications.html')">Publications</button>
+            <button id="conferences-button" onclick="switchPage(this, 'conferences.html')">Conferences</button>
+            <button id="simulations-button" onclick="switchPage(this, 'simulations.html')">Simulations</button>
+            <button id="software-button" onclick="switchPage(this, 'software.html')">Software</button>
         </nav>
-        <iframe id="content-frame" src="home.html"></iframe>
+        <iframe id="content-frame"></iframe>
     </body>
 </html>
